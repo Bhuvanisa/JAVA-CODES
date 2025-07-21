@@ -1,0 +1,47 @@
+package practise;
+
+import java.util.Scanner;
+
+public class PerfectNum {
+	//sum of the divisor of the num = original num
+	//for  ex: divisor of 6=1,2,3(exclude itself) so sum=6
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the num");
+		int num=scan.nextInt();
+		for(int i=1;i<=num;i++) {
+		if(perfect(i)) {
+			System.out.println(i);
+		}
+		}
+		//print(num);
+		
+	}
+//	public static void print(int num) {
+//		int sum=0;
+//		for(int i=1;i<num;i++) {
+//			if(num%i==0) {
+//				sum=sum+i;
+//			}
+//		}
+//		if(num==sum) {
+//			System.out.println("it is a perfect num");
+//		}
+//		else {
+//			System.out.println("it is not a perfect square");
+//		}
+//	}
+	
+	public static boolean perfect(int num) {
+		int sum=0;
+		for(int i=1;i<num;i++) {
+			if(num%i==0) {
+				sum=sum+i;
+			}
+		}
+		return num==sum;
+		
+		}
+	
+
+}
