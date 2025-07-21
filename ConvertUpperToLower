@@ -1,0 +1,33 @@
+package practise;
+import java.util.Scanner;
+
+public class ConvertUpperToLower {
+	public static void main(String[] args) {
+//		here we have to use ascii value since 
+//		upper case alpha A have 65 and lower case alpha a have 97 
+//		subtracting both of them provide(97-65=32)
+//		so to covert to upper to lower the condition is +32
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the Character");
+		char ch=scan.next().charAt(0);
+		System.out.println(check(ch));
+		
+		
+	}
+	public static char check(char ch) {
+		if(ch>='A'&&ch<='Z') {
+			ch=(char)(ch+32);
+			
+		}
+		else {
+			System.out.println("Invalid");
+		}
+		return ch;
+		
+		
+		
+		
+		
+	}
+
+}
