@@ -1,0 +1,25 @@
+package practise;
+import java.util.Scanner;
+
+public class Fibonacci {
+	// 0  1  0+1=1  1+1=2  2+1=3  2+3=5....
+	
+	public static void main(String[] args) {
+		Scanner scan= new Scanner(System.in);
+		System.out.println("Enter the num");
+		int num=scan.nextInt();
+		print(num);
+		
+	}
+	public static void print(int num) {
+		int first=0;
+		int second=1;
+		for(int i=1;i<=num;i++) {
+			int next=first+second;//1  2  3
+			System.out.println(first);//0 1  1
+			first=second;//f=1  1
+			second=next;//s=1  2
+		}
+	}
+
+}
