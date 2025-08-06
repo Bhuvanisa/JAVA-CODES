@@ -1,0 +1,27 @@
+package practise;
+
+import java.util.Scanner;
+
+public class LeapYear {
+	public static void main(String[] args) {
+//		the condition for the leap years 
+//		-->either it should divisible by 4 and not divisible by 100
+//		-->or it must divisible by 400
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the num");
+		int year=scan.nextInt();
+		System.out.println(check(year));
+	}
+	
+	public static String check(int year) {
+		if(( year%4==0 && year%100!=0) || year%400==0)  {
+			return "It is a leap year";
+		}
+		else {
+			return "It is not a leap year";
+		}
+	}
+	
+
+}
